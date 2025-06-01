@@ -58,7 +58,7 @@ void loop() {
     String input = Serial.readStringUntil('\n');
     input.trim();  // Remove any trailing newline or spaces
     if (input.length() > 0) {
-      Serial.print("Sent: ");
+      Serial.print(" Sent: ");
       Serial.println(input);
       rf95.send((uint8_t *)input.c_str(), input.length());
       rf95.waitPacketSent();
