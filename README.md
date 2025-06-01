@@ -23,7 +23,7 @@ This is a simple **LoRa serial chat application** using an Arduino board and an 
 
 ---
 
-## ⚙️ Software Setup
+## ⚙️ software setup
 
 ### 1. Install Arduino IDE
 
