@@ -16,23 +16,23 @@ void setup() {
     delay(1);
   }
   delay(100);
-  Serial.println("LoRa Chat!");
+  Serial.println("Welcome to LoRa Chat!");
   // Manual reset
   digitalWrite(RFM95_RST, LOW);
   delay(10);
   digitalWrite(RFM95_RST, HIGH);
   delay(10);
   if (!rf95.init()) {
-    Serial.println("LoRa radio init failed");
+    Serial.println("LoRa radio init failed!");
     while (1);
   }
   Serial.println("LoRa radio init OK!");
   // Set frequency
   if (!rf95.setFrequency(RF95_FREQ)) {
-    Serial.println("setFrequency failed");
+    Serial.println("setFrequency failed!");
     while (1);
   }
-  Serial.print("Set Freq to: ");
+  Serial.print("Set Frequency to: ");
   Serial.println(RF95_FREQ);
   // Set power level
   rf95.setTxPower(23, false);
@@ -46,11 +46,9 @@ void loop() {
       buf[len] = '\0';  // Null-terminate the received message
       Serial.print("Received: ");
       Serial.println((char *)buf);  // Safely print the message
-      //Serial.print("RSSI: ");
-      //Serial.println(rf95.lastRssi(), DEC);
-      Serial.println("***");
+      Serial.println("****");
     } else {
-      Serial.println("Receive failed");
+      Serial.println("Receive failed!");
     }
   }
   // Check for user input
@@ -62,8 +60,7 @@ void loop() {
       Serial.println(input);
       rf95.send((uint8_t *)input.c_str(), input.length());
       rf95.waitPacketSent();
-      //Serial.println("Message sent!");
-      Serial.println("***");
+      Serial.println("****");
     }
   }
 }
