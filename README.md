@@ -2,7 +2,7 @@
 
 A simple, minimal **LoRa serial chat application** for Arduino boards using the RH_RF95 LoRa module. This project enables two-way text communication over LoRa, controlled entirely through the Arduino IDE’s serial monitor—**no jumper wires required**.
 
-This is a **team project**, originally **forked from [UKevine/LoRa](https://github.com/UKevine/LoRa)** and adapted for our specific use case with USB-only serial monitoring.
+This is a **team project**, originally **forked from [Ukevine/LoRa](https://github.com/Ukevine/LoRa)** and adapted for our specific use case with USB-only serial monitoring.
 
 ---
 
